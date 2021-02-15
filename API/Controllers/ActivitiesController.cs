@@ -8,10 +8,10 @@ using Persistence;
 
 namespace API.Controllers
 {
-    public class AvtivitiesController : BaseApiController
+    public class ActivitiesController : BaseApiController
     {
         public DataContext _context { get; }
-        public AvtivitiesController(DataContext context)
+        public ActivitiesController(DataContext context)
         {
             _context = context;
         }
