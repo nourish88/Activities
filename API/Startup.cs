@@ -1,12 +1,14 @@
 
 
+using API.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using API.Extensions.ApplicationServiceExtensions;
+
+
 
 namespace API
 {
@@ -27,7 +29,7 @@ namespace API
 
             services.AddControllers();
             services.AddApplicationServices(_config);
-           
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,8 +51,9 @@ namespace API
 
             app.UseEndpoints(endpoints =>
             {
-      endpoints.MapControllers();
+                endpoints.MapControllers();
             });
-                  }
+
+        }
     }
 }
